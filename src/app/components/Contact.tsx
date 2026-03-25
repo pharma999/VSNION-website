@@ -316,7 +316,7 @@ export function Contact() {
 
               <div className="flex gap-4">
   {[
-    { name: "LinkedIn", url: "#", icon: FaLinkedinIn },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/vsnion-technology-private-ltd-9959a63b7/", icon: FaLinkedinIn },
     { name: "Twitter", url: "#", icon: FaTwitter },
     // { name: "GitHub", url: "#", icon: FaGithub },
     // { name: "Instagram", url: "#", icon: FaInstagram },

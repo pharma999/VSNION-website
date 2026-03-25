@@ -111,7 +111,7 @@ export function Footer() {
             © 2026 VSNION. All rights reserved. Built with passion and innovation.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors text-sm">
+            <a href="https://www.linkedin.com/in/vsnion-technology-private-ltd-9959a63b7/" className="text-gray-400 hover:text-indigo-400 transition-colors text-sm">
               LinkedIn
             </a>
             <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors text-sm">
