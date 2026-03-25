@@ -57,7 +57,7 @@ export function Footer() {
                 </span>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Innovating the future with AI, Web, App, and IoT solutions. Building tomorrow's technology today.
+                Innovating the future with AI, Web, App, and IoT solutions. Building tomorrow&apos;s technology today.
               </p>
             </motion.div>
           </div>
@@ -88,17 +88,6 @@ export function Footer() {
           ))}
         </div>
 
-        {/* Newsletter section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="border-t border-white/10 pt-8 mb-8"
-        >
-         
-        </motion.div>
-
         {/* Bottom bar */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -111,18 +100,18 @@ export function Footer() {
             © 2026 VSNION. All rights reserved. Built with passion and innovation.
           </p>
           <div className="flex gap-6">
-            <a href="https://www.linkedin.com/in/vsnion-technology-private-ltd-9959a63b7/" className="text-gray-400 hover:text-indigo-400 transition-colors text-sm">
+            <a
+              href="https://www.linkedin.com/in/vsnion-technology-private-ltd-9959a63b7/"
+              className="text-gray-400 hover:text-indigo-400 transition-colors text-sm"
+            >
               LinkedIn
             </a>
-            <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors text-sm">
+            <a
+              href="#"
+              className="text-gray-400 hover:text-indigo-400 transition-colors text-sm"
+            >
               Twitter
             </a>
-            {/* <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors text-sm">
-              GitHub
-            </a>
-            <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors text-sm">
-              Instagram
-            </a> */}
           </div>
         </motion.div>
       </div>
