@@ -23,7 +23,7 @@ export default function App() {
       <WhyChooseUs />
       {/* <Testimonials /> */}
       <Careers />
-      <Team />
+      {/* <Team /> */}
       <Contact />
       <Footer />
     </div>

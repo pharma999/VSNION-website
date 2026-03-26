@@ -564,11 +564,11 @@ export function Team() {
       name: "Adarsh",
       role: "CEO & Co-Founder",
       image: adarsh,
-      bio: "Visionary leader with 15+ years in tech innovation",
+      bio: "Visionary leader with 3+ years in tech innovation",
       social: {
         linkedin: "#",
         twitter: "#",
-        email: "alex@vsnion.com",
+        email: "adarshv978@gmail.com",
       },
     },
     {
