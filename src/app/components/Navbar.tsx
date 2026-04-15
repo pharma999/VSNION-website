@@ -1,19 +1,41 @@
 import { motion } from 'motion/react';
 import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import logo2 from '../assets/logo2.png';
+
+const logo2 = new URL('../assets/logo2.png', import.meta.url).href;
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Careers', href: '#careers' },
-    // { name: 'Team', href: '#team' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'About', to: '/#about' },
+    { name: 'Services', to: '/#services' },
+    { name: 'Training', to: '/training' },
+    { name: 'Portfolio', to: '/#portfolio' },
+    { name: 'Careers', to: '/#careers' },
+    { name: 'Contact', to: '/#contact' }
   ];
+
+  const handleNavLink = (to: string) => {
+    setIsOpen(false);
+
+    if (to.startsWith('/#')) {
+      const hash = to.substring(to.indexOf('#') + 1);
+      navigate('/');
+
+      window.requestAnimationFrame(() => {
+        const target = document.getElementById(hash);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+      return;
+    }
+
+    navigate(to);
+  };
 
   return (
     <motion.nav
@@ -25,20 +47,21 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
             <img src={logo2} alt="VSNION logo" className="h-10 w-auto block" />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <button
                 key={link.name}
-                href={link.href}
+                type="button"
+                onClick={() => handleNavLink(link.to)}
                 className="text-gray-300 hover:text-white transition-colors font-medium"
               >
                 {link.name}
-              </a>
+              </button>
             ))}
           </div>
 
@@ -61,14 +84,14 @@ export function Navbar() {
           >
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
+                <button
                   key={link.name}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-gray-300 hover:text-white transition-colors font-medium py-2"
+                  type="button"
+                  onClick={() => handleNavLink(link.to)}
+                  className="text-gray-300 hover:text-white transition-colors font-medium py-2 text-left"
                 >
                   {link.name}
-                </a>
+                </button>
               ))}
             </div>
           </motion.div>

@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { motion } from "motion/react";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
@@ -40,6 +38,8 @@ export function Contact() {
       content: "+91 6386098744",
       link: "tel:+91 6386098744",
     },
+    
+    
     {
       icon: MapPin,
       title: "Office",
@@ -111,7 +111,8 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-white py-24">
+    <>
+      <section id="contact" className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -342,5 +343,6 @@ export function Contact() {
         </div>
       </div>
     </section>
+    </>
   );
 }

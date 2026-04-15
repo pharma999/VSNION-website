@@ -4,14 +4,90 @@ import { motion } from "motion/react";
 import { Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 
-
 export function Hero() {
   const goToSection = (href: string) => {
     window.location.hash = href;
   };
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-[#0A1628] via-[#1a2332] to-[#0A1628]">
+    <>
+        <meta
+          name="description"
+          content="VSNION delivers cutting-edge AI solutions, web development, mobile apps, and digital transformation services. Transform your business with our expert technology team."
+        />
+        <meta
+          name="keywords"
+          content="VSNION, AI solutions, web development, mobile app development, digital transformation, technology company, software development, IoT solutions, DevOps"
+        />
+        <meta property="og:title" content="VSNION | AI Solutions, Web Development & Digital Transformation" />
+        <meta
+          property="og:description"
+          content="VSNION delivers cutting-edge AI solutions, web development, mobile apps, and digital transformation services."
+        />
+        <meta property="og:url" content="https://www.vsnion.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.vsnion.com/hero-og-image.jpg" />
+        <link rel="canonical" href="https://www.vsnion.com/" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "VSNION",
+            "url": "https://www.vsnion.com",
+            "logo": "https://www.vsnion.com/logo.png",
+            "description": "Leading technology company specializing in AI, web development, and digital transformation",
+            "foundingDate": "2020",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+91-6386098744",
+              "contactType": "customer service",
+              "availableLanguage": "English"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/vsnion",
+              "https://twitter.com/vsnion",
+              "https://github.com/vsnion"
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Lucknow",
+              "addressRegion": "Uttar Pradesh",
+              "addressCountry": "India"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Technology Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "AI Solutions",
+                    "description": "Artificial Intelligence and Machine Learning solutions"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Web Development",
+                    "description": "Custom web applications and platforms"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Mobile App Development",
+                    "description": "iOS and Android mobile applications"
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
+
+      <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-[#0A1628] via-[#1a2332] to-[#0A1628]">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -71,7 +147,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mx-auto mb-6 max-w-4xl text-3xl font-bold leading-tight text-white md:text-5xl"
         >
-          Innovating the Future with AI, Apps, Web, IoT & DevOps
+          Innovating the Future with AI, Apps, Web, IoT, DevOps & Training
         </motion.h2>
 
         <motion.p
@@ -110,5 +186,6 @@ export function Hero() {
         </motion.div>
       </div>
     </section>
+    </>
   );
 }
