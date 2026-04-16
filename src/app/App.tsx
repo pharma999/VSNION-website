@@ -74,12 +74,21 @@ export default function App() {
         />
         <meta
           name="keywords"
-          content="VSNION, digital solutions, web development, AI solutions, app development, IoT, DevOps, training, workshops, technology consulting, software development, brand growth"
+          content="VSNION, digital solutions, web development, AI solutions, app development, IoT, DevOps, training, workshops, technology consulting, software development, brand growth, VSNION technology, VSNION services, VSNION training"
         />
         <meta name="author" content="VSNION" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#0A1628" />
+        <meta name="msapplication-TileColor" content="#0A1628" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <link rel="canonical" href="https://www.vsnion.com/" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
 
         {/* Open Graph */}
         <meta property="og:title" content="VSNION | Creative Digital Solutions & Brand Growth" />

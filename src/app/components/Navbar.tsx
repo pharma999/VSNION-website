@@ -25,11 +25,19 @@ export function Navbar() {
       const hash = to.substring(to.indexOf('#') + 1);
       navigate('/');
 
-      window.requestAnimationFrame(() => {
+      // Wait for the element to be available before scrolling
+      const scrollToElement = () => {
         const target = document.getElementById(hash);
         if (target) {
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          // If not found, try again after a short delay
+          setTimeout(scrollToElement, 100);
         }
+      };
+
+      window.requestAnimationFrame(() => {
+        scrollToElement();
       });
       return;
     }

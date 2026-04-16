@@ -251,6 +251,10 @@ export function Training({ isStandalonePage = false }: { isStandalonePage?: bool
           <meta property="og:url" content={canonicalUrl} />
           <meta property="og:type" content="website" />
           <meta property="og:image" content="https://www.vsnion.com/training-og-image.jpg" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Professional Training Programs | VSNION Technology Solutions" />
+          <meta name="twitter:description" content="Comprehensive training programs in Machine Learning, Data Science, Cloud Computing, DevOps, Full-Stack Development, and IoT. Upskill your team with industry-leading courses." />
+          <meta name="twitter:image" content="https://www.vsnion.com/training-og-image.jpg" />
           <link rel="canonical" href={canonicalUrl} />
           <script type="application/ld+json">{JSON.stringify(generateStructuredData())}</script>
         </Helmet>
